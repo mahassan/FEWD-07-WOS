@@ -27,7 +27,7 @@ function addPhraseToDisplay(phrase){
         let li = document.createElement('LI');
         //If the character in the array is a letter and not a space, the function should add the class “letter” to the list item.
         //if(splitedWords.includes(splitedWords[i])){
-            li.className = 'letter';
+           // li.className = 'letter';
             li.innerHTML = splitedWords[i];
             ul.appendChild(li);
        // }
