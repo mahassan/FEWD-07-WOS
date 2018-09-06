@@ -21,21 +21,22 @@ function getRandomPhraseAsArray(arr){
 
 function addPhrasetoDisplay(splitedWords){
     for(i = 0; i < splitedWords.length; i++){
-        if(splitedWords[i] != " "){
-            //console.log(splitedWords[i]);
-            li = document.createElement("LI");
-            li.className = "letter";
-            li.textContent = splitedWords[i]
-            phraseUL.appendChild(li);
+        if(splitedWords[i] === ""){
+            li.className = " ";
         }else{
-           li.className = " ";
+           //console.log(splitedWords[i]);
+           li = document.createElement("LI");
+           li.className = "letter";
+           li.textContent = splitedWords[i]
+           phraseUL.appendChild(li);
         }
+        return li
     }
-    return li
 }
 const phraseArray = getRandomPhraseAsArray(phrase);
 const words = addPhrasetoDisplay(phraseArray);
-console.log(words);
+console.log(addPhrasetoDisplay(phraseArray))
+//console.log(words);
 
 // function checkLetter(){
 //     for(i = 0; i <= words.length; i++){
