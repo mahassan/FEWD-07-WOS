@@ -23,10 +23,10 @@ function addPhrasetoDisplay(splitedWords){
             li = document.createElement("li");
             li.textContent = splitedWords[i]
             phraseUL.appendChild(li);
-        if(splitedWords[i] != ''){
+        if(splitedWords[i] != ' '){
             li.className = "letter";
         }else{
-            li.textContent = " ";
+            li.className = "space";
         }
     }
     return li
