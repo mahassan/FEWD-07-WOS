@@ -39,8 +39,16 @@ function checkLetter(){
     let ulChildren = phraseUL.children;
     for(let i= 0; i<ulChildren.length;i++){
         if(ulChildren[i].className === 'letter'){
-            console.log(ulChildren[i])
+          ulChildren[i].classList.add('show');
         }
     }
 }
 checkLetter()
+
+qwerty.addEventListener("keypress", function(e){
+    // e.target.className = "show"
+    // e.target.setAttribute("disabled","")
+    for(let i = 0; i < qwerty.length; i++){
+        console.log(qwerty[i]);
+    }
+})
