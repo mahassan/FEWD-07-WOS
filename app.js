@@ -4,6 +4,7 @@ const btn__reset = document.querySelector('.btn__reset');
 const qwerty = document.getElementById('qwerty');
 let phraseUL = document.querySelector('ul');
 let missed = 0; //more than 5 losses the game;
+let realLetters;
 
 phrase = ["LUKE CAGE IS GANGSTA NOW","Misty Knight"];
 
@@ -16,7 +17,6 @@ function getRandomPhraseAsArray(arr){
    let randomPhrase =  phrase[Math.floor(Math.random()* arr.length)];
    return randomPhrase.split("");
 } 
-console.log(getRandomPhraseAsArray(phrase))
 
 function addPhrasetoDisplay(splitedWords){
     for(i = 0; i < splitedWords.length; i++){
@@ -34,3 +34,7 @@ function addPhrasetoDisplay(splitedWords){
 const phraseArray = getRandomPhraseAsArray(phrase);
 const words = addPhrasetoDisplay(phraseArray);
 
+function checkLetter(){
+   console.log(realLetters);
+}
+checkLetter(words);
