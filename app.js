@@ -4,7 +4,7 @@ const btn__reset = document.querySelector('.btn__reset');
 const qwerty = document.getElementById('qwerty');
 let phraseUL = document.querySelector('ul');
 let missed = 0; //more than 5 losses the game;
-let realLetters;
+let rightWords;
 
 phrase = ["LUKE CAGE IS GANGSTA NOW","Misty Knight"];
 
@@ -24,7 +24,7 @@ function addPhrasetoDisplay(splitedWords){
             li.textContent = splitedWords[i]
             phraseUL.appendChild(li);
         if(splitedWords[i] != ' '){
-            li.className = "letter";
+            rightWords = li.className = "letter";
         }else{
             li.className = "space";
         }
@@ -34,7 +34,21 @@ function addPhrasetoDisplay(splitedWords){
 const phraseArray = getRandomPhraseAsArray(phrase);
 const words = addPhrasetoDisplay(phraseArray);
 
+
 function checkLetter(){
-   console.log(realLetters);
+    let ulChildren = phraseUL.children;
+    for(let i= 0; i<ulChildren.length;i++){
+        if(ulChildren[i].className === 'letter'){
+          ulChildren[i].classList.add('show');
+        }
+    }
 }
-checkLetter(words);
+checkLetter()
+
+qwerty.addEventListener("keypress", function(e){
+    // e.target.className = "show"
+    // e.target.setAttribute("disabled","")
+    for(let i = 0; i < qwerty.length; i++){
+        console.log(qwerty[i]);
+    }
+})
