@@ -45,10 +45,7 @@ function checkLetter(){
 }
 checkLetter()
 
-qwerty.addEventListener("keypress", function(e){
-    // e.target.className = "show"
-    // e.target.setAttribute("disabled","")
-    for(let i = 0; i < qwerty.length; i++){
-        console.log(qwerty[i]);
-    }
+const button = qwerty.addEventListener("click", function(e){
+    e.target.className = "chosen";
+    e.target.setAttribute("disabled","")
 })
