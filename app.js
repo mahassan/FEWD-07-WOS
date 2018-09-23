@@ -35,17 +35,23 @@ const phraseArray = getRandomPhraseAsArray(phrase);
 const words = addPhrasetoDisplay(phraseArray);
 
 
-function checkLetter(){
+function checkLetter(button){
     let ulChildren = phraseUL.children;
     for(let i= 0; i<ulChildren.length;i++){
-        if(ulChildren[i].className === 'letter'){
+        //console.log(ulChildren[i].textContent === button)
+        if(ulChildren[i].className === 'letter' && ulChildren[i].textContent === button){
           ulChildren[i].classList.add('show');
         }
     }
 }
-checkLetter()
+//checkLetter()
 
-const button = qwerty.addEventListener("click", function(e){
-    e.target.className = "chosen";
-    e.target.setAttribute("disabled","")
+qwerty.addEventListener("click", function(e){
+    //Generic variable to extend as needed
+    const target = e.target;
+    //saving in button to reference elsewhere
+    const button = e.target.textContent
+    checkLetter(button)
+    target.className = "chosen";
+    target.setAttribute("disabled","")
 })
