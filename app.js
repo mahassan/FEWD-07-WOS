@@ -38,20 +38,23 @@ const words = addPhrasetoDisplay(phraseArray);
 function checkLetter(button){
     let ulChildren = phraseUL.children;
     for(let i= 0; i<ulChildren.length;i++){
-        //console.log(ulChildren[i].textContent === button)
-        if(ulChildren[i].className === 'letter' && ulChildren[i].textContent === button){
-          ulChildren[i].classList.add('show');
+        //console.log(ulChildren[i])
+        if(ulChildren[i].className.includes("letter")){
+            if(ulChildren[i].textContent === button){
+                ulChildren[i].classList.add('show');
+            }
         }
     }
 }
 //checkLetter()
 
-qwerty.addEventListener("click", function(e){
+qwerty.addEventListener("keypress", function(e){
     //Generic variable to extend as needed
     const target = e.target;
     //saving in button to reference elsewhere
-    const button = e.target.textContent
-    let letterFound = checkLetter(button)
+    const button = e.target.textContent.toLowerCase();
+    console.log(button);
+    checkLetter(button)
     target.className = "chosen";
     target.setAttribute("disabled","")
-})
+});
