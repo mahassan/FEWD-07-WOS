@@ -51,7 +51,7 @@ qwerty.addEventListener("click", function(e){
     const target = e.target;
     //saving in button to reference elsewhere
     const button = e.target.textContent
-    checkLetter(button)
+    let letterFound = checkLetter(button)
     target.className = "chosen";
     target.setAttribute("disabled","")
 })
