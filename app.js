@@ -52,8 +52,11 @@ qwerty.addEventListener("keypress", function(e){
     const target = e.target;
     //saving in button to reference elsewhere
     const button = e.target.textContent;
-    console.log(button);
-    checkLetter(button)
     target.className = "chosen";
-    target.setAttribute("disabled","")
+    target.setAttribute("disabled","");
+    let letterFound = checkLetter(button)
+    if(letterFound === ' '){
+        missed +=1;
+        console.log(missed);
+    }
 });
