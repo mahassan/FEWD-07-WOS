@@ -55,8 +55,9 @@ qwerty.addEventListener("keypress", function(e){
     target.className = "chosen";
     target.setAttribute("disabled","");
     let letterFound = checkLetter(button)
-    if(letterFound === ' '){
-        missed +=1;
-        console.log(missed);
-    }
+    console.log(button);
+    // if(letterFound === ' '){
+    //     missed +=1;
+    //     console.log(missed);
+    // }
 });
