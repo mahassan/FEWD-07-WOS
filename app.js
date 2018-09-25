@@ -48,7 +48,7 @@ function checkLetter(button) {
     return letterFound;
 }
 function checkWin() {
-    const letter = document.querySelector(".letter");
+    const letter = document.querySelectorAll(".letter");
     const shown = document.querySelectorAll('.show');
     if(letter.length === shown.length){
         overlay.className = "win";
@@ -72,6 +72,10 @@ qwerty.addEventListener("click", function (e) {
         target.setAttribute("disabled", "");
         let letterFound = checkLetter(button)
         if (letterFound === null) {
+            const scoreboard = document.getElementsByTagName("img");
+            for(let i = 0; i < scoreboard.length; i++){
+                scoreboard[i].src = "images/lostHeart.png";
+            }
             missed += 1;
         }
     }
