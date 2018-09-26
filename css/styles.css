@@ -101,6 +101,8 @@ button {
 .show {
   color: #000;
   background-color: #76CE82;
+  transform: rotateX(360deg);
+  transition-duration: 2s;
 }
 
 /* Keyboard */
@@ -154,6 +156,7 @@ button {
 
 .win {
   background-color: var(--color-win);
+  position: relative;
 }
 
 .win a {

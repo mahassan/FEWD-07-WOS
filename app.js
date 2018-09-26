@@ -74,7 +74,7 @@ qwerty.addEventListener("click", function (e) {
         if (letterFound === null) {
             const scoreboard = document.getElementsByTagName("img");
             for(let i = 0; i < scoreboard.length; i++){
-                scoreboard[i].src = "images/lostHeart.png";
+                scoreboard[missed].src = "images/lostHeart.png";
             }
             missed += 1;
         }
