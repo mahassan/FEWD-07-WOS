@@ -5,7 +5,7 @@ let phraseUL = document.querySelector('ul');
 let missed = 0; //more than 5 losses the game;
 let rightWords;
 
-phrase = ["LUKE CAGE IS GANGSTA NOW", "Misty Knight"];
+phrase = ["Shades", "Misty Knight", "Bushmaster","Jessica Jones", "Daredevil"];
 const overlay = document.getElementById('overlay')
 //listerner 
 btn__reset.addEventListener('click', function () {
